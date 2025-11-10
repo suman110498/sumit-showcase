@@ -10,10 +10,10 @@ const About = () => {
         <Card className="p-8 shadow-card hover:shadow-hover transition-shadow">
           <p className="text-lg text-muted-foreground leading-relaxed text-center">
             A highly disciplined, dedicated, and hardworking professional with an optimistic approach toward challenges and continuous learning. 
-            Passionate about leveraging technology to solve complex problems and drive innovation in the IT and cybersecurity domains.
+            Passionate about leveraging data analytics and business intelligence to drive strategic decision-making and organizational growth.
             <br /><br />
-            Seeking opportunities to contribute technical expertise, analytical thinking, and collaborative spirit to organizations 
-            committed to digital transformation and security excellence.
+            Seeking opportunities to contribute analytical expertise, problem-solving skills, and collaborative spirit to organizations 
+            committed to data-driven transformation and business excellence.
           </p>
         </Card>
       </div>

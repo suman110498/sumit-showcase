@@ -16,10 +16,10 @@ const Hero = () => {
               Sumit Kumar Suman
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground">
-              Full Stack Developer & Cybersecurity Enthusiast
+              Business Analyst
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Passionate about leveraging technology to solve complex problems and drive innovation in IT and cybersecurity domains.
+              Transforming data into actionable insights and driving strategic business decisions through analytics and stakeholder collaboration.
             </p>
             <div className="flex flex-wrap gap-4">
               <Button 
