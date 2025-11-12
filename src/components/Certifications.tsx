@@ -1,6 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Award } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 const certifications = [
   {
@@ -21,8 +22,16 @@ const certifications = [
 ];
 
 const Certifications = () => {
+  const { ref, isVisible } = useScrollAnimation();
+  
   return (
-    <section id="certifications" className="py-20 px-4 bg-muted/30">
+    <section 
+      id="certifications" 
+      ref={ref}
+      className={`py-20 px-4 bg-muted/30 transition-all duration-1000 ${
+        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+      }`}
+    >
       <div className="container max-w-6xl mx-auto">
         <h2 className="text-4xl font-bold text-center mb-12 text-foreground">
           Professional Certifications

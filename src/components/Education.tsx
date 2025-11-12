@@ -1,5 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { GraduationCap } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 const education = [
   {
@@ -25,8 +26,16 @@ const education = [
 ];
 
 const Education = () => {
+  const { ref, isVisible } = useScrollAnimation();
+  
   return (
-    <section id="education" className="py-20 px-4">
+    <section 
+      id="education" 
+      ref={ref}
+      className={`py-20 px-4 transition-all duration-1000 ${
+        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+      }`}
+    >
       <div className="container max-w-6xl mx-auto">
         <h2 className="text-4xl font-bold text-center mb-12 text-foreground">
           Education

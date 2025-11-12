@@ -1,5 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Folder } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 const projects = [
   {
@@ -25,8 +26,16 @@ const projects = [
 ];
 
 const Projects = () => {
+  const { ref, isVisible } = useScrollAnimation();
+  
   return (
-    <section id="projects" className="py-20 px-4">
+    <section 
+      id="projects" 
+      ref={ref}
+      className={`py-20 px-4 transition-all duration-1000 ${
+        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+      }`}
+    >
       <div className="container max-w-6xl mx-auto">
         <h2 className="text-4xl font-bold text-center mb-12 text-foreground">
           Key Projects

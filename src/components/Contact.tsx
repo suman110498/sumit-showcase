@@ -1,10 +1,19 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Mail, Linkedin, Palette } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 const Contact = () => {
+  const { ref, isVisible } = useScrollAnimation();
+  
   return (
-    <section id="contact" className="py-20 px-4">
+    <section 
+      id="contact" 
+      ref={ref}
+      className={`py-20 px-4 transition-all duration-1000 ${
+        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+      }`}
+    >
       <div className="container max-w-4xl mx-auto">
         <h2 className="text-4xl font-bold text-center mb-12 text-foreground">
           Get In Touch
